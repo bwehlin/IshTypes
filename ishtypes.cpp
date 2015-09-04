@@ -36,7 +36,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cstring>
+#include <string>
 #include <chrono>
 #include <cmath>
 #include <cassert>
@@ -85,8 +85,7 @@ std::string ThousandSeparate(uint64_t number) {
   std::string str = ss.str();
   ss.clear();
 
-  for (std::string::iterator itr = str.end()-1; itr >= str.begin(); --itr)
-  {
+  for (std::string::iterator itr = str.end()-1; itr >= str.begin(); --itr) {
     pos++;
 
     ret_val = (*itr) + ret_val;
@@ -347,8 +346,7 @@ uint64_t IsInt(char* str) {
 
   Output:    enumeration data
 */
-EnumerationData Enumerate(int m, int n)
-{
+EnumerationData Enumerate(int m, int n) {
   uint64_t total_sum = 0;
   EnumerationData ret_struct;
   Ui64vec primes;
